@@ -73,7 +73,9 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    // const stringArray = 
+    // return [];
+    // Object.entries(arr)
 }
 
 /*

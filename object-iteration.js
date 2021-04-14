@@ -19,8 +19,24 @@ Output:
 */
 
 export function makeMoreScreamingKeys(someObject) {
-    return {};
-}
+  const keys = Object.keys(someObject)
+  const values = Object.values(someObject);
+    const upper = keys.map((key) => {
+       return key.toUpperCase()
+    })
+    //now we have an array of uppercase keys [NAME, AGE, TYPE]
+    const withValues = upper.map((key) => {
+        return {
+            upper: key.name
+        }
+    });
+    //i need to loop through each name and add a value
+
+    return withValues
+
+
+};
+
 
 /*
 Output:
@@ -32,13 +48,22 @@ or
 ,
 etc
 
+    const expected = {
+        NAME: 'scooter',
+        AGE: 1,
+        TYPE: 'puppy'
+    };
+
 (we cannot control the order that these appear in without extra work, so any of these outputs are acceptable)
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    return '';
-}
-
+    
+  const weird = Object.keys(someObject)
+        return weird.join('')
+        
+    };
+    
 
 /*
 Output:
@@ -50,5 +75,6 @@ Output:
 */
 
 export function makeTuples(someObject) {
-    return [];
+    const asArray = Object.entries(someObject)
+    return asArray;
 }
