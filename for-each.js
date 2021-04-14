@@ -7,8 +7,14 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const arrayOfNames = [];
+    arr.forEach((item) => {
+        arrayOfNames.push(item.name)
+    })
+
+    return arrayOfNames;
 }
+
 
 /*
 Output:
@@ -17,21 +23,55 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+
+    const arrayOfTypes = [];
+    arr.forEach((item) => {
+    arrayOfTypes.push(item.type)
+    arrayOfTypes.reverse()  
+
+    })
+    return arrayOfTypes;
 }
 
 /*
 Output:
 
 [
-    { nombre: 'spot', tipo: 'dog' },
-    { nombre: 'rover', tipo: 'dog' },
-    { nombre: 'jumpy', tipo: 'frog' },
-    { nombre: 'einstein', tipo: 'cat' },
+    {   nombre: 'spot', 
+        tipo: 'dog' 
+    },
+    { nombre: 'rover', 
+      tipo: 'dog' 
+    },
+    { nombre: 'jumpy', 
+      tipo: 'frog' },
+    { nombre: 'einstein', 
+      tipo: 'cat' },
 ]
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
-}
+
+    const spanishArray = [];
+    arr.forEach((object) => {
+        spanishArray.push({
+        nombre: object.name, 
+        tipo: object.type
+    })
+    })
+    return spanishArray;
+
+};
+
+
+
+
+
+
+
+
+
+
+  
+
 
